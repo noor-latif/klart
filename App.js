@@ -1,22 +1,15 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableHighlight, View, SafeAreaView, Image} from 'react-native';
+import { StyleSheet, Text, TouchableHighlight, View, SafeAreaView, Image, Button} from 'react-native';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text>Salam alaikom!</Text>
-      <TouchableHighlight onPress={() => console.log("Tapped!")}>
-        <Image
-          blurRadius={5}
-          fadeDuration={1000}
-          source={{
-            width: 200,
-            height: 300,
-            uri: "https://picsum.photos/200/300"
-          }}
-        />
-      </TouchableHighlight>
+      <Button
+        color="orange"
+        title="click me"
+        title="Click me" onPress={() => console.log("click it!")} />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
